@@ -126,13 +126,17 @@ html, body{
 /* COLOR SECTION END */
 
 
-#reset {
-    margin: 130px 2px;
+button {
+    margin: 130px 2px 0;
     width: 94%;
     height: 30px;
     color: #262627;
     border: none;
     border-radius: 10px;
+}
+
+#reset {
+    margin-top: 10px;
 }
 
 

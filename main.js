@@ -1,4 +1,19 @@
 let slider = document.getElementById('slider');
+let currentGridDimension = slider.value;
+
+
+
+function createGrid(){
+    let gridContainer = document.querySelector('.grid');
+    let gridCellLength = 600/currentGridDimension;
+    
+    for (let i = 1; i <=currentGridDimension; i++){
+        let gridCell = document.createElement('div');
+        gridCell.style.height = `${gridCellLength}`
+    }
+}
+
+
 
 
 function sliderBackgroundColorChange(event){
