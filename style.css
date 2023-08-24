@@ -37,7 +37,7 @@ html, body{
     color: #fff;
     
 }
-
+/* GRID SIZE SLIDER START*/
 .slider-container{
     margin-top: 50px;
     margin-bottom: 30px;
@@ -45,7 +45,37 @@ html, body{
 
 #slider{
     margin-top: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #a5a5a7;
+    border-radius: 10px;
+    width: 148px;
+    height: 17.33px;
 }
+
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fff;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+}
+
+#slider::-moz-range-thumb{
+    background: #fff;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+/* GRID SIZE SLIDER END */
+
+
 
 /* COLOR SECTION START */
 .color {
@@ -97,5 +127,10 @@ html, body{
     width: 94%;
     height: 30px;
     color: #262627;
+    border: none;
+    border-radius: 10px;
 }
+
+
+
 
