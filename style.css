@@ -83,8 +83,12 @@ html, body{
     width: 30px;
     background-color: white;
     margin: 10px 10px 10px 3px;
-    border-radius: 8px;                                                                                    
+    border-radius: 8px;     
+    opacity: 0.8;                                                                               
 
+}
+.color:hover{
+    opacity: 1;
 }
 
 .color-sub-container {
