@@ -47,6 +47,7 @@ html, body{
     margin-top: 10px;
 }
 
+/* COLOR SECTION START */
 .color {
     height: 30px;
     width: 30px;
@@ -62,6 +63,34 @@ html, body{
     flex-wrap: wrap;
     margin-top: 10px;
 }
+
+#red {
+    background-color: #e03131;
+}
+
+#green {
+    background-color: #2f9e44;
+}
+
+#blue {
+    background-color: #1971c2;
+}
+
+#orange {
+    background-color: #f08c00;
+}
+
+#random {
+    background-image: url('random-color.jpg');  
+}
+
+.color-selected {
+    border: 2px solid #262627;
+    outline: 2px solid white;
+}
+
+/* COLOR SECTION END */
+
 
 #reset {
     margin: 130px 2px;
