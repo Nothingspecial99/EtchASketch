@@ -122,9 +122,10 @@ html, body{
     background-image: url('random-color.jpg');  
 }
 
-.color-selected {
+.selected-color {
     border: 2px solid #262627;
     outline: 2px solid white;
+    opacity: 1;
 }
 
 /* COLOR SECTION END */

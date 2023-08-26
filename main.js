@@ -19,7 +19,7 @@ function createGrid(){
     for (let i = 1; i <=requiredGridCells; i++){
         let gridCell = document.createElement('div');
         gridCell.style.height = `${gridCellLength}px`;
-        gridCell.style.width = `${gridCellLength}px`
+        gridCell.style.width = `${gridCellLength}px`    
         gridCell.style.backgroundColor = "#121212";
         gridCell.classList = 'grid-cell'
         gridContainer.appendChild(gridCell);
