@@ -80,8 +80,16 @@ resetButton.addEventListener('click', createGrid);
 
 function changeGridCellColor(event){
     let gridCell = event.target;
+    let selectedColor = document.querySelector('.selected-color').getAttribute('id');
+
     gridCell.style.backgroundColor = strokeColor;
-    console.log('hey');
+
+    if (selectedColor === "random"){
+        strokeColor = getRandomColor();
+    }
+
+    
+
 }
 
 
@@ -98,4 +106,11 @@ function getRandomNumberUpto255(){
     randomNumber = Math.floor(Math.random() *256);
     return randomNumber;
     
-} 
+}
+
+function randomColorClick(){
+    strokeColor = getRandomColor();
+}
+
+let randomColorElement = document.querySelector('#random')
+randomColorElement.addEventListener('click', randomColorClick)
