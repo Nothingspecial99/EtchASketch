@@ -35,7 +35,7 @@ function changeGridDimension(){
     gridDimensionDisplay.textContent = `${currentDimensionValue}x${currentDimensionValue}`
 }
 
-slider.addEventListener('mousemove', changeGridDimension);
+slider.addEventListener('input', changeGridDimension);
 
 
 
@@ -46,5 +46,5 @@ function sliderBackgroundColorChange(event){
     slider.style.background =  `linear-gradient(90deg, #fff ${sliderCurrentPercentage}%, #a5a5a7 ${sliderCurrentPercentage}%)`;
 }
 
-slider.addEventListener('mousemove', sliderBackgroundColorChange);
+slider.addEventListener('input', sliderBackgroundColorChange);
 createGridButton.addEventListener('click', createGrid);
