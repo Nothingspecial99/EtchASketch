@@ -1,5 +1,6 @@
 let slider = document.getElementById('slider');
 let createGridButton = document.querySelector("#create-grid")
+let strokeColor = 'rgb(255, 255, 255)';
 
 
 
@@ -26,6 +27,24 @@ function createGrid(){
     }
 
 }
+createGridButton.addEventListener('click', createGrid);
+
+
+function changeStrokeColor(event){
+    colorElement = event.target;
+    strokeColor = window.getComputedStyle(colorElement).backgroundColor;
+
+    colorElements = document.querySelectorAll('.color');
+    colorElements.forEach((colorElement) => colorElement.classList.remove('selected-color'));
+
+    colorElement.classList.add('selected-color');
+
+}   
+
+let colors = document.querySelectorAll('.color');
+colors.forEach((color) => color.addEventListener('click', changeStrokeColor))
+
+
 
 
 //Grid dimension display
@@ -47,4 +66,3 @@ function sliderBackgroundColorChange(event){
 }
 
 slider.addEventListener('input', sliderBackgroundColorChange);
-createGridButton.addEventListener('click', createGrid);
