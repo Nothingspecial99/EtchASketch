@@ -87,3 +87,15 @@ function changeGridCellColor(event){
 
 
 gridCells.forEach((gridCell) => gridCell.addEventListener('mouseenter', changeGridCellColor));
+
+
+function getRandomColor(){
+    let color = `rgb(${getRandomNumberUpto255()},${getRandomNumberUpto255()},${getRandomNumberUpto255()})`;
+    return color;
+}
+
+function getRandomNumberUpto255(){
+    randomNumber = Math.floor(Math.random() *256);
+    return randomNumber;
+    
+} 
