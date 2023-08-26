@@ -3,29 +3,29 @@ let createGridButton = document.querySelector("#create-grid")
 
 
 
-// function createGrid(){
-//     let gridContainer = document.querySelector('.grid');
-//     let currentGridDimension = +slider.value;
-//     let gridContainerLength = 600;
-//     let gridCellLength = parseFloat(gridContainerLength/currentGridDimension).toFixed(9);
-//     let requiredGridCells = currentGridDimension**2;
+function createGrid(){
+    let gridContainer = document.querySelector('.grid');
+    let currentGridDimension = +slider.value;
+    let gridContainerLength = 600;
+    let gridCellLength = Math.floor(gridContainerLength/currentGridDimension * 100) / 100;
+    let requiredGridCells = currentGridDimension**2;
 
-//     let previousGridCells = document.querySelectorAll('.grid-cell');
-//     previousGridCells.forEach((gridCell) => gridContainer.removeChild(gridCell));
-
-
+    let previousGridCells = document.querySelectorAll('.grid-cell');
+    previousGridCells.forEach((gridCell) => gridContainer.removeChild(gridCell));
 
 
-//     for (let i = 1; i <=requiredGridCells; i++){
-//         let gridCell = document.createElement('div');
-//         gridCell.style.height = `${gridCellLength}px`;
-//         gridCell.style.width = `${gridCellLength}px`
-//         gridCell.style.backgroundColor = "#121212";
-//         gridCell.classList = 'grid-cell'
-//         gridContainer.appendChild(gridCell);
-//     }
 
-// }
+
+    for (let i = 1; i <=requiredGridCells; i++){
+        let gridCell = document.createElement('div');
+        gridCell.style.height = `${gridCellLength}px`;
+        gridCell.style.width = `${gridCellLength}px`
+        gridCell.style.backgroundColor = "#121212";
+        gridCell.classList = 'grid-cell'
+        gridContainer.appendChild(gridCell);
+    }
+
+}
 
 
 //Grid dimension display
