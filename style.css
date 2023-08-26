@@ -145,5 +145,16 @@ button {
 }
 
 
+button:hover{
+    background-color: #1971c2;
+    color: white;
+}
+
+button:active{
+    background-color: #1971c2;
+    color: white;
+    transform: translateY(4px);
+}
+
 
 
