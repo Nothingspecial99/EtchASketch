@@ -1,18 +1,41 @@
 let slider = document.getElementById('slider');
-let currentGridDimension = slider.value;
+let createGridButton = document.querySelector("#create-grid")
 
 
 
-function createGrid(){
-    let gridContainer = document.querySelector('.grid');
-    let gridCellLength = 600/currentGridDimension;
-    
-    for (let i = 1; i <=currentGridDimension; i++){
-        let gridCell = document.createElement('div');
-        gridCell.style.height = `${gridCellLength}`
-    }
+// function createGrid(){
+//     let gridContainer = document.querySelector('.grid');
+//     let currentGridDimension = +slider.value;
+//     let gridContainerLength = 600;
+//     let gridCellLength = parseFloat(gridContainerLength/currentGridDimension).toFixed(9);
+//     let requiredGridCells = currentGridDimension**2;
+
+//     let previousGridCells = document.querySelectorAll('.grid-cell');
+//     previousGridCells.forEach((gridCell) => gridContainer.removeChild(gridCell));
+
+
+
+
+//     for (let i = 1; i <=requiredGridCells; i++){
+//         let gridCell = document.createElement('div');
+//         gridCell.style.height = `${gridCellLength}px`;
+//         gridCell.style.width = `${gridCellLength}px`
+//         gridCell.style.backgroundColor = "#121212";
+//         gridCell.classList = 'grid-cell'
+//         gridContainer.appendChild(gridCell);
+//     }
+
+// }
+
+
+//Grid dimension display
+function changeGridDimension(){
+    let currentDimensionValue = slider.value;
+    let gridDimensionDisplay = document.querySelector('#grid-dimension-display');
+    gridDimensionDisplay.textContent = `${currentDimensionValue}x${currentDimensionValue}`
 }
 
+slider.addEventListener('mousemove', changeGridDimension);
 
 
 
@@ -24,3 +47,4 @@ function sliderBackgroundColorChange(event){
 }
 
 slider.addEventListener('mousemove', sliderBackgroundColorChange);
+createGridButton.addEventListener('click', createGrid);
