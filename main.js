@@ -1,6 +1,7 @@
 let slider = document.getElementById('slider');
 let createGridButton = document.querySelector("#create-grid")
 let strokeColor = 'rgb(255, 255, 255)';
+let gridCells = document.querySelectorAll('.grid-cell');
 
 
 createGrid() 
@@ -26,6 +27,9 @@ function createGrid(){
         gridCell.classList = 'grid-cell'
         gridContainer.appendChild(gridCell);
     }
+
+    gridCells = document.querySelectorAll('.grid-cell');
+    gridCells.forEach((gridCell) => gridCell.addEventListener('mouseenter', changeGridCellColor));
 
 }
 createGridButton.addEventListener('click', createGrid);
@@ -71,3 +75,15 @@ slider.addEventListener('input', sliderBackgroundColorChange);
 
 let resetButton = document.querySelector('#reset');
 resetButton.addEventListener('click', createGrid);
+
+
+
+function changeGridCellColor(event){
+    let gridCell = event.target;
+    gridCell.style.backgroundColor = strokeColor;
+    console.log('hey');
+}
+
+
+
+gridCells.forEach((gridCell) => gridCell.addEventListener('mouseenter', changeGridCellColor));
