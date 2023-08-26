@@ -3,6 +3,7 @@ let createGridButton = document.querySelector("#create-grid")
 let strokeColor = 'rgb(255, 255, 255)';
 
 
+createGrid() 
 
 function createGrid(){
     let gridContainer = document.querySelector('.grid');
@@ -66,3 +67,7 @@ function sliderBackgroundColorChange(event){
 }
 
 slider.addEventListener('input', sliderBackgroundColorChange);
+
+
+let resetButton = document.querySelector('#reset');
+resetButton.addEventListener('click', createGrid);
