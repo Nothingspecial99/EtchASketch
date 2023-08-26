@@ -7,7 +7,7 @@ function createGrid(){
     let gridContainer = document.querySelector('.grid');
     let currentGridDimension = +slider.value;
     let gridContainerLength = 600;
-    let gridCellLength = Math.floor(gridContainerLength/currentGridDimension * 100) / 100;
+    let gridCellLength = Math.floor(gridContainerLength/currentGridDimension * 100 -1) / 100;
     let requiredGridCells = currentGridDimension**2;
 
     let previousGridCells = document.querySelectorAll('.grid-cell');
